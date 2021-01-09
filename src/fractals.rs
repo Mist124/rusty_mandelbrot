@@ -158,7 +158,7 @@ pub fn mandelbrot(x: f64, y: f64) -> f64 {
 }
 
 #[inline(always)]
-pub fn _mandelbrot_trap(x: f64, y: f64, trap: &dyn Fn(f64, f64) -> f64) -> f64 {
+pub fn mandelbrot_trap(x: f64, y: f64, trap: &dyn Fn(f64, f64) -> f64) -> f64 {
     // sections from this code are from Inigo Quilez: https://www.shadertoy.com/view/MltXz2
     let c2 = x*x + y*y;
     if 256f64*c2*c2 - 96f64*c2 + 32f64*x - 3f64 < 0f64 {
